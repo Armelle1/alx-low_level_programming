@@ -3,11 +3,13 @@
  * swap_int - swap value.
  * @a: the pointers.
  * @b: the pointer.
- *
+ * @temp: the pointer.
  * Return: Always 0.
  */
 void swap_int(int *a, int *b)
 {
-       	*a = 42;
-	*b = 98;
+	int temp;
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
