@@ -9,7 +9,7 @@ void rev_string(char *s)
 	char readedchar;
 	int numberofchar = 0;
 	int i;
-	char reverse[50];
+	char reverse[500];
 	int c = 0;
 
 	readedchar = *(s + numberofchar);
