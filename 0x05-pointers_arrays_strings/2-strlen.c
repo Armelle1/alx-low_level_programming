@@ -2,10 +2,17 @@
 /**
  * _strlen- the lengh oh a string.
  *@str:the character
- * Return: Always 0.
+ * Return: the length of a string.
  */
 int _strlen(char *str)
 {
-	_strlen(str);
-	return (0);
+	int numberofchar = 0;
+	char readedchar;
+
+	do {
+		readedchar = *(str + numberofchar);
+		numberofchar++;
+	} while (readedchar != '\0');
+	numberofchar--;
+	return (numberofchar);
 }
