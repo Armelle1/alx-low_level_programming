@@ -17,10 +17,10 @@ void puts_half(char *str)
 		numberofchar++;
 		readedchar = *(str + numberofchar);
 	}
-	if ((numberofchar % 2) != 0)
-		middle = (numberofchar - 1) / 2;
-	else
+	if ((numberofchar % 2) == 0)
 		middle = numberofchar / 2;
+	else
+		middle = (numberofchar - 1) / 2;
 	for (i = middle; i < numberofchar; i++)
 	{
 		_putchar(*(str + i));
