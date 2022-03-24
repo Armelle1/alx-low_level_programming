@@ -20,10 +20,9 @@ int _strcmp(char *s1, char *s2)
 		readedchar = *(s1 + indexnumber);
 		readedchar2 = *(s2 + indexnumber);
 	}
+	indexnumber--;
 	if (readedchar == '\0' && readedchar2 == '\0')
-		return (0);
-	else if (readedchar == '\0')
-		return (-15);
+		return (*(s1 + indexnumber) - *(s2 + indexnumber));
 	else
-		return (15);
+		return (readedchar - readedchar2);
 }
