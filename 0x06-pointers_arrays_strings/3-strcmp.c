@@ -22,7 +22,9 @@ int _strcmp(char *s1, char *s2)
 	}
 	indexnumber--;
 	if (readedchar == '\0' && readedchar2 == '\0')
-		return (*(s1 + indexnumber) - *(s2 + indexnumber));
+		return (0);
+	else if (readedchar == '\0')
+		return (-15);
 	else
-		return (readedchar - readedchar2);
+		return (15);
 }
