@@ -17,7 +17,7 @@ char *_strcat(char *dest, char *src)
 		readedchar1 = *(dest + numberofchar);
 		numberofchar++;
 	}
-
+	numberofchar--;
 	while (readedchar2 != '\0')
 	{
 		readedchar2 = *(src + numberofchar2);
@@ -25,6 +25,7 @@ char *_strcat(char *dest, char *src)
 		numberofchar2++;
 		numberofchar++;
 	}
+	numberofchar--;
 	*(dest + numberofchar) = readedchar2;
 	return (dest);
 }
