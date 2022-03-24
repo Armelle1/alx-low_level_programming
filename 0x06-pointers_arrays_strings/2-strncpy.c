@@ -8,18 +8,15 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char readedchar;
-	int numberofchar = 0;
+	int i;
 
-	readedchar = *(src + numberofchar);
-
-	while (n > 1 && readedchar != '\0')
+	for (i = 0; i < n && *(src + i) != '\0'; i++)
 	{
-		*(dest + numberofchar) = readedchar;
-		numberofchar++;
-		readedchar = *(src + numberofchar);
-		n--;
+		*(dest + i) = *(src + i);
 	}
-	*(dest + numberofchar) = readedchar;
+	for ( ; i < n; i++)
+	{
+		*(dest + i) = '\0';
+	}
 	return (dest);
 }

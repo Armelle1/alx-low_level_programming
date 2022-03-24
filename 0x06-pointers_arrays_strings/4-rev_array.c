@@ -7,24 +7,16 @@
  */
 void reverse_array(int *a, int n)
 {
-	int readedint;
-	int numberofint = 0;
-	int i;
-	int reverse[500];
-	int c = 0;
 
-	readedint = *(a + numberofint);
-while (readedint != '0')
-{
-	numberofint++;
-	readedint = *(a + numberofint);
-}
-for (i = numberofint - 1; i >= 0; i--)
+	int i;
+	int c = 0;
+	int reverse[500];
+for (i = n- 1; i >= 0; i--)
 {
 	reverse[c] = *(a + i);
 	c++;
 }
-for (c = 0; c < numberofint; c++)
+for (c = 0; c < n; c++)
 {
 	*(a + c) = reverse[c];
 }
