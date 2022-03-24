@@ -20,10 +20,10 @@ char *_strcat(char *dest, char *src)
 
 	while (readedchar2 != '\0')
 	{
-			readedchar2 = *(src + numberofchar2);
-	*(dest + numberofchar) = readedchar2;
-	numberofchar2++;
-	numberofchar++;
+		readedchar2 = *(src + numberofchar2);
+		*(dest + numberofchar) = readedchar2;
+		numberofchar2++;
+		numberofchar++;
 	}
 	*(dest + numberofchar) = readedchar2;
 	return (dest);
