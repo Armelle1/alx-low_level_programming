@@ -1,6 +1,8 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * str_concat- concatenate two strings
+ *str_concat- concatenate two strings
  *@s1: the parameter
  *@s2: the parameter
  * Return: Always 0.
@@ -22,11 +24,11 @@ char *str_concat(char *s1, char *s2)
 	numberofchar--;
 	while (readedchar2 != '\0')
 	{
-		readedchar2 = *(s1 + numberofchar2);
+		readedchar2 = *(s2 + numberofchar2);
 		numberofchar2++;
 	}
 	numberofchar2--;
-	s3 = malloc((sizeofchar)*(numberofchar1 + numberofchar2));
+	s3 = malloc((sizeof (char))*(numberofchar + numberofchar2));
 	if (s3 == NULL)
 	{
 		return (NULL);
