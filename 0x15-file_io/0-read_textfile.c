@@ -30,9 +30,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	c = read(fd, buf, letters);
 	buf[c] = '\0';
-	z = write(STDOUT_FILENO, buf, letters);
-	printf("%d %d", c, z);
+	z = write(STDOUT_FILENO, buf, c);
 	if ((z == -1) || (z != c))
 		return (0);
+	close(fd);
 	return (c);
 }
