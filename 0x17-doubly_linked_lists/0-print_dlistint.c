@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- ** print_distint - prints all the elements of a dlistint_t
+ ** print_dlistint - prints all the elements of a dlistint_t
  **@h: list
  ** Return: the number of nodes
  **/
